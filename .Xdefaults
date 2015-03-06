@@ -1,0 +1,10 @@
+
+urxvt*transparent: true
+urxvt*shading: 20
+urxvt*fading: 20
+urxvt*scrollBar: false
+urxvt*saveLines: 500
+urxvt*pointerBlank: true
+
+urxvt*foreground:       #bbbbbb
+urxvt*background:       #2c2c2c
