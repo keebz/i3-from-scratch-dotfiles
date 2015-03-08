@@ -11,7 +11,7 @@
 
 set $mod Mod4
 exec --no-startup-id feh --bg-fill ~/pictures/color.png
-gap_size 10
+gap_size 5
 client.focused            $gray1   $gray1   #FFFFFF   #333333
 client.focused_inactive   $gray2   $gray2   #FFFFFF   #000000
 client.unfocused          $gray2   $gray2   #FFFFFF   #000000
@@ -37,6 +37,15 @@ bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
+
+# open quickswitch
+bindsym $mod+z exec quickswitch.py
+
+# open lock
+bindsym $mod+Shift+F6 exec lock 
+
+#open clock
+bindsym $mod+Shift+t exec urxvt -e tty-clock -t -c
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run

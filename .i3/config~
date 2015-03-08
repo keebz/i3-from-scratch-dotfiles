@@ -10,8 +10,11 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-exec --no-startup-id feh --bg-fill ~/pictures/drifts.png
-gap_size 10
+exec --no-startup-id feh --bg-fill ~/pictures/color.png
+gap_size 5
+client.focused            $gray1   $gray1   #FFFFFF   #333333
+client.focused_inactive   $gray2   $gray2   #FFFFFF   #000000
+client.unfocused          $gray2   $gray2   #FFFFFF   #000000
 # font for window titles. ISO 10646 = Unicode
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font pango: Ubuntu Mono 10
@@ -34,6 +37,12 @@ bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
+
+# open quickswitch
+bindsym $mod+z exec quickswitch.py
+
+# open clock
+bindsym $mod+Shift+F6 exec lock 
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
